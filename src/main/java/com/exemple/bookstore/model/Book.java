@@ -42,6 +42,9 @@ public class Book {
     @Column(name="quantity", nullable = false)
     private Integer quantity;
 
+    @Column(name="active", nullable = false)
+    private Boolean active;
+
     public Book(BookDTO bookDTO){
         this.title = bookDTO.getTitle();
         this.author = bookDTO.getAuthor();
@@ -50,6 +53,7 @@ public class Book {
         this.releaseYear = bookDTO.getReleaseYear();
         this.price = bookDTO.getPrice();
         this.quantity = bookDTO.getQuantity();
+        this.active = bookDTO.getActive();
 
     }
 
