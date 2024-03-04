@@ -1,6 +1,6 @@
 package com.exemple.bookstore.model;
 
-import com.exemple.bookstore.dto.CostumerDTO;
+import com.exemple.bookstore.dto.CustomerDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,7 +12,7 @@ import lombok.*;
 @Table(name="costumer")
 @Entity
 @EqualsAndHashCode(of="id")
-public class Costumer {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -22,7 +22,7 @@ public class Costumer {
     @Column(name="name", length = 250, nullable = false)
     private String name;
 
-    public Costumer(CostumerDTO costumerDTO){
+    public Customer(CustomerDTO costumerDTO){
         this.name = costumerDTO.getName();
     }
 
